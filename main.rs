@@ -4,34 +4,48 @@
 use grep::grep;
 use constructors::GrepArgsConstructor;
 mod grep;
-use r3bl_rs_utils::utils::{style_error, with};
-//TUI (Text User Interface) framework
-use std::env::args;
 mod constructors;
+use r3bl_rs_utils::utils::{style_error, with};
+use std::env::args;
 use std::error::Error;
 use std::process::exit;
 
-fn run(args: Vec<String>) -> Result<(), Box<dyn Error>> { 
-  // returns () if successful, Box<dyn Error> if failure
-  // dyn Error - trait that represents any type that can be used as an Error
-  // Box heap allocates the error - makes sure it has a fixed size
-  grep(GrepArgsConstructor::parse(args)?)?;
-  Ok(()) // returns () if successful
+// ====================================================================
+// Function to execute the grep functionality
+// ====================================================================
+fn run_grep(args: Vec<String>) -> Result<(), Box<dyn Error>> {
+    let grep_args = GrepArgsConstructor::parse(args)?; // Parse arguments using GrepArgsConstructor
+
+    grep(grep_args)?; // Execute grep function with parsed arguments
+
+    Ok(()) // Return Ok(()) if successful
+}
+
+// ====================================================================
+// Function to handle errors and exit the program
+// ====================================================================
+fn handle_error(err: Box<dyn Error>) {
+    eprintln!("{}: {}", style_error("Error Detected"), err);
+    exit(1); // Exit with code 1 in case of an error
+}
+
+// ====================================================================
+// Function to handle the result of running the grep functionality
+// ====================================================================
+fn handle_result(result: Result<(), Box<dyn Error>>) {
+    match result {
+        Ok(()) => exit(0), // Exit with code 0 if successful
+        Err(err) => handle_error(err), // Handle error if an error occurs
+    }
 }
 
 // ====================================================================
 // Main
 // ====================================================================
 fn main() {
-  let args = args().collect::<Vec<String>>();
+    let args = args().collect::<Vec<String>>(); // Fetch command-line arguments as a vector of strings
 
-  // |it| - a closure on it
-  // the result of run is closed in it - used to implement inline functions
-  with(run(args), |it| match it {
-    Ok(()) => exit(0),
-    Err(err) => {
-      eprintln!("{}: {}", style_error("Error Detected"), err);
-      exit(1);
-    }
-  });
+    let result = run_grep(args); // Execute the run_grep function using the command-line arguments
+
+    handle_result(result); // Handle the result of running the grep functionality
 }
