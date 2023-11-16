@@ -2,15 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+void printUsage() {
+    printf("Correct format is:\n");
+    printf("./grep_impli.o word_to_search file_to_search\n");
+    printf("./grep_impli.o -c word_to_search file_to_search\n");
+}
+
 int main(int argc, char** argv){
 
         //============================================================================
         // Taking in input
         //============================================================================
-        if(argc < 3) {
-                printf("Correct format is:\n");
-                printf("./grep_impli.o word_to_search file_to_search\n");
-                printf("./grep_impli.o -c word_to_search file_to_search\n");
+        if (argc < 3) {
+                printUsage();
                 return 1;
         }
         
