@@ -9,3 +9,5 @@ Resources for learning Rust - https://doc.rust-lang.org/book/
 impl keyword - https://doc.rust-lang.org/std/keyword.impl.html
 
 Accepting command line arguments in Rust and minigrep - https://doc.rust-lang.org/book/ch12-01-accepting-command-line-arguments.html#:~:text=Reading%20the%20Argument%20Values,line%20arguments%20passed%20to%20minigrep%20.
+
+Grep source code - https://github.com/git/git/blob/master/grep.c
