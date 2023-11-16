@@ -3,19 +3,23 @@
 Results
 ---------
 40 lines  – Rust
+
 Result - more time but lesser CPU utilisation
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/63d7aec2-7802-45e6-8be1-6b4bfc1464c0)
 
 40 lines  – C 
+
 Result - less time but more CPU utilization
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/92e23985-a34f-49a8-9862-dd9c9d9f40e3)
 
 1 million+ lines - Rust 
+
 Result - more time but lesser CPU utilisation
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/0a3e2e13-e98c-452d-9ed0-22f54b531f3e)
 
 
 1 million+ lines – C 
+
 Result - less time but more CPU utilization
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a)
 
