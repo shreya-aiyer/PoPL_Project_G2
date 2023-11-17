@@ -10,7 +10,7 @@ Result - more time but lesser CPU utilisation
 40 lines  – C 
 
 Result - less time but more CPU utilization
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/92e23985-a34f-49a8-9862-dd9c9d9f40e3
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/92e23985-a34f-49a8-9862-dd9c9d9f40e3)
 
 8 lakh+ lines - Rust 
 
