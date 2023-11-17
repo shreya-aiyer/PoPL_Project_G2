@@ -36,6 +36,10 @@ Result - more time but lesser CPU utilisation
 Result - less time but more CPU utilization
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a)
 
+Tabulated Results For Time
+---------------------------
+![Screenshot from 2023-11-17 15-41-53](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/13db8f52-b8e8-4ff1-b961-029f548532cc)
+![Screenshot from 2023-11-17 15-40-08](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/30ec1955-3c7e-4b6e-ab75-50541146eb88)
 
 References
 ----------
