@@ -38,8 +38,9 @@ Result - less time but more CPU utilization
 
 Tabulated Results For Time
 ---------------------------
-![Screenshot from 2023-11-17 15-41-53](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/13db8f52-b8e8-4ff1-b961-029f548532cc)
-![Screenshot from 2023-11-17 15-40-08](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/30ec1955-3c7e-4b6e-ab75-50541146eb88)
+![Screenshot from 2023-11-17 15-55-18](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/abf46738-333e-4f48-9b28-71d877c2e3d7)
+![Screenshot from 2023-11-17 15-56-46](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/f2f34e89-6b36-42cf-a69c-eff3b77df50a)
+
 
 References
 ----------
