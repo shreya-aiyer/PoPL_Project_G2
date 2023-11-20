@@ -14,6 +14,20 @@ gcc grep_impli.c
 
 ./a.out [-c for case sensitivity ] < word to search for> <file in which to search >
 
+
+Imperitive vs Functional(Declarative programming language)
+----------------------------------------------------------
+Imperitive programming languages like C describes a sequence of steps(algorithms) followed to reach a particular result. The focus here is on the 'How?'.
+Functional programming languages like Rust are more focused on 'What?' is to be obtained rather than how it is obtained.
+
+There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like map() and filter() in the code. For someone new to the language, such functions lack clarity and lead to additional cognitive load. 
+
+However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language.
+
+Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
+
+The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
+
 Results
 ---------
 40 lines  – Rust
@@ -54,20 +68,6 @@ Tabulated Results For Time
 ---------------------------
 ![Screenshot from 2023-11-17 15-55-18](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/abf46738-333e-4f48-9b28-71d877c2e3d7)
 ![Screenshot from 2023-11-17 15-56-46](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/f2f34e89-6b36-42cf-a69c-eff3b77df50a)
-
-Imperitive vs Functional(Declarative programming language)
-
-Imperitive programming languages like C describes a sequence of steps(algorithms) followed to reach a particular result. The focus here is on the 'How?'.
-Functional programming languages like Rust are more focused on 'What?' is to be obtained rather than how it is obtained.
-
-There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like map() and filter() in the code. For someone new to the language, such functions lack clarity and lead to additional cognitive load. 
-
-However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language.
-
-Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
-
-The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
-
 
 References
 ----------
