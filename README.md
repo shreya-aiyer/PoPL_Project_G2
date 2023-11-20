@@ -1,5 +1,15 @@
 # PoPL_Project_G2
 
+Instructions for compilation and running
+-----------------------------------------
+Cargo:
+cargo build
+cargo run < word to search for> <file in which to search > [ any character for case sensitive/not sensitive ]
+
+C:
+gcc grep_impli.c
+./a.out [-c for case sensitivity ] < word to search for> <file in which to search >
+
 Results
 ---------
 40 lines  – Rust
