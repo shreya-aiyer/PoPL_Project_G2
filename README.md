@@ -64,6 +64,16 @@ Result - more time but lesser CPU utilisation
 Result - less time but more CPU utilization
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a)
 
+Results for Run Time memory consumed
+------
+Rust
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/5864dbe7-dedc-44c8-977e-e978b239f9c5)
+
+
+C
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/dcb22fad-b80d-44b8-a709-f57383c96f2b)
+
+
 Tabulated Results For Time
 ---------------------------
 ![Screenshot from 2023-11-17 15-55-18](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/abf46738-333e-4f48-9b28-71d877c2e3d7)
