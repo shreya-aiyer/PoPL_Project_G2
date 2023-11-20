@@ -1,4 +1,4 @@
-# PoPL_Project_G2
+# PoPL Project G2
 
 Instructions for compilation and running
 -----------------------------------------
