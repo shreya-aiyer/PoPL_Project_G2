@@ -42,7 +42,7 @@ Functional programming languages like Rust are more focused on 'What?' is to be 
 ------------------
 - There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like **map()(line 28 of grep.rs)** and **filter()(line 19 of grep.rs)** in this code. 
 
-- For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and more consise than an imperitive language like C.
+- For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and more concise than an imperitive language like C.
 - Coding with the memory management restrictions in Rust can be very challenging when familiar with an imperitive language as the code frequently throws errors in the compile stage. Overcoming this is a major challenge for new users as well. Variables getting dropped when the owner goes out of scopes is also a fresh concept that needs a good deal of time to adapt to.
 
 - #### Memory Management
