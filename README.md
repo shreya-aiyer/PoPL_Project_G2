@@ -41,6 +41,7 @@ The reality is that somewhere underneath any declarative system there will be im
 
 The advantage of utilising Rust here is the additional memory safety. Rust employs a unique ownership system where each value in Rust has a variable that is its "owner." There are strict rules governing ownership, borrowing, and references that prevent common issues like null pointer dereferencing, dangling pointers, and memory leaks. In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.
 
+
 Instructions for compilation and running
 -----------------------------------------
 Cargo:
@@ -57,6 +58,8 @@ gcc grep_impli.c
 
 Results
 ---------
+For results, we thought of a five-pronged approach to get accurate data. This was done because using one input only will give us biased results, and the other prongs of the fork can help in _confirming_ the results that the first few prongs had shown. The 5 levels of data used were all text files: one of 40 lines, one of ~70 lines, one of ~100,000 lines, one of ~500,000 lines and the fifth one had ~1,000,000 lines. The sizes of these files are as shown in the table below. These files are also part of this repository under "textfiles.zip"
+
 40 lines  – Rust
 
 Result - more time but lesser CPU utilisation
