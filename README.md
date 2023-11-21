@@ -104,7 +104,7 @@ Result - more time but lesser CPU utilisation
 1 million+ lines – C 
 
 Result - less time but more CPU utilization
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a)
 
 Tabulated Results For Time
 ---------------------------
