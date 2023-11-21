@@ -24,6 +24,9 @@ The testing component was locally present, and primarily used the inbuilt system
 
 The code was run on a MacBook Air running macOS Sonoma on the Apple M1 chipset. To pull statistics on memory and CPU utilization, we used the Activity Monitor, which comes as a default in macOS. This application gives live data about all running processes on the system.
 
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/8b0bf0c1-7263-4cab-bae1-bd82911fe329)
+
+
 POPL Aspects
 ------------
 - #### Imperitive vs Functional (Declarative programming language)
