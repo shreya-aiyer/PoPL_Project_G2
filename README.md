@@ -104,17 +104,7 @@ Result - more time but lesser CPU utilisation
 1 million+ lines – C 
 
 Result - less time but more CPU utilization
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a)
-
-Results for Run Time memory consumed (1 million line input)
-------
-Rust
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/5864dbe7-dedc-44c8-977e-e978b239f9c5)
-
-
-C
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/dcb22fad-b80d-44b8-a709-f57383c96f2b)
-
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/2b4e13fb-0988-4b1f-b217-a622cc176d2a
 
 Tabulated Results For Time
 ---------------------------
