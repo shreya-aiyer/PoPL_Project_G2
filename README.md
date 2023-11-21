@@ -21,26 +21,31 @@ To acquire data about the memory deallocated/leaked in the C code, we used the s
 
 POPL Aspects
 ------------
--#### Imperitive vs Functional(Declarative programming language)
+- #### Imperitive vs Functional (Declarative programming language)
 ----------------------------------------------------------
--Imperitive programming languages like C describes a sequence of steps(algorithms) followed to reach a particular result. The focus here is on the 'How?'.
+- Imperitive programming languages like C describes a sequence of steps (algorithms) followed to reach a particular result. The focus here is on the 'How?'.
 Functional programming languages like Rust are more focused on 'What?' is to be obtained rather than how it is obtained.
 
--Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
+- Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
 
--The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
+- The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
 
--#### Ease of Use
+- #### Ease of Use
 ------------------
--There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like **map()(line 28 of grep.rs)** and **filter()(line 19 of grep.rs)** in this code. 
+- There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like **map()(line 28 of grep.rs)** and **filter()(line 19 of grep.rs)** in this code. 
 
--For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language like C.
+- For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language like C.
 
--#### Memory Management
+- #### Memory Management
 -------------------------
--The advantage of utilising Rust here is the additional memory safety. Rust employs a unique ownership system where each value in Rust has a variable that is its "owner." There are strict rules governing ownership, borrowing, and references that prevent common issues like null pointer dereferencing, dangling pointers, and memory leaks. 
-
--In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.
+- The advantage of utilising Rust here is the additional memory safety. Rust employs a unique ownership system where each value in Rust has a variable that is its "owner." There are strict rules governing ownership, borrowing, and references that prevent common issues like null pointer dereferencing, dangling pointers, and memory leaks.
+- These rules make the language much harder to use as getting to the run stage requires removing all these issues with owndership and the various memory management tactics at the compile stage.
+- Ownership utilisation example -
+  - **Grep Args struct in constructors.rs** - The GrepArgs struct contains fields of type String. In Rust, String is a growable, heap-allocated data structure, and owns the memory it points to. In the GrepArgs struct, search and file_path are owned String fields implying that when a GrepArgs instance is created, it will own the memory used to store the String data.
+  - **main.rs** - The args vector fetched from the command line (args()) is collected into a Vec<String>. Ownership of the Vec<String> is transferred to the args variable within the main function, and then transferred to the run_grep function when it is passed as an argument.
+  - Once any of these go out of scope, the memory allocated to them is dropped.
+- Temporary allocation for the modified strings (to_lowercase(), format!()) and the vector created by collect::<Vec<String>>(), are handled by Rust's ownership and borrowing rules, ensuring they are freed when they are no longer needed. Thus for every line of input, additional double memory is not retained when converting to lowercase and storing the duplicate string .
+- In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.(refer **lines 78,79 grep_impli.c** and the below analysis of the removal of the manual deallocation)
 
 Instructions for compilation and running
 -----------------------------------------
