@@ -82,6 +82,21 @@ Result - more time but lesser CPU utilisation
 Result - less time but more CPU utilization
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/92e23985-a34f-49a8-9862-dd9c9d9f40e3)
 
+70 lines - Rust
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/71a9db84-cae1-4702-b443-eb396b1e6a3f)
+
+70 lines - C
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/3a9b92ed-241b-4fd8-8494-5194f718a352)
+
+
+100,000 lines - Rust
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/fa9c8276-3776-4fe0-92e9-f2df093f1c46)
+
+100,000 lines - C
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/5d5cd5a2-166d-4fae-8170-a4679a149c5f)
+
+
+
 500,000 lines - Rust 
 
 Result - more time but lesser CPU utilisation
