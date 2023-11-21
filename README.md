@@ -12,6 +12,8 @@ Ease of Use - Size of code in both implementations, and qualitative understandin
 
 An analysis of whether the functional or imperative programming approach to a CLI tool like grep would be an overall outcome of the project - this analysis would be on the basis of the theoretical and quantitative understanding of the two paradigms, and how they apply to grep’s use case.
 
+Though there are existing implementations of grep using Rust, this comparative study incorporating memory utilisation has not been done before. This distinction in method of analysis sets our project apart from what we have currently seen existing. 
+
 
 Software Architecture
 ---------------------
