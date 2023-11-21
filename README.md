@@ -42,7 +42,8 @@ Functional programming languages like Rust are more focused on 'What?' is to be 
 ------------------
 - There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like **map()(line 28 of grep.rs)** and **filter()(line 19 of grep.rs)** in this code. 
 
-- For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language like C.
+- For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and more consise than an imperitive language like C.
+- Coding with the memory management restrictions in Rust can be very challenging when familiar with an imperitive language as the code frequently throws errors in the compile stage. Overcoming this is a major challenge for new users as well. Variables getting dropped when the owner goes out of scopes is also a fresh concept that needs a good deal of time to adapt to.
 
 - #### Memory Management
 -------------------------
@@ -120,10 +121,16 @@ Tabulated Results For Time
 ![Screenshot from 2023-11-17 15-55-18](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/abf46738-333e-4f48-9b28-71d877c2e3d7)
 ![Screenshot from 2023-11-17 15-56-46](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/f2f34e89-6b36-42cf-a69c-eff3b77df50a)
 
+Tabulated Results For Memory Utilisation
+----------
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/b75becd1-afa7-4bae-bb56-dc07e0673ceb)
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/207adb29-6eb7-473f-bfce-c1c0b29de768)
+
 Difference in data when failing to deallocate memory in C - this is not possible to do in Rust due to how the langauge is designed
 ----
 Both non deallocated and definitely leaked memory is seen.
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/b1ef3aba-db81-4e1b-a6a6-165c40742fb6)
+
 
 Future work
 -----------
