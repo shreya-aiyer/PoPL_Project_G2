@@ -7,6 +7,7 @@ grep (global regular expression print) is a standard command-line utility and a 
 Our goal is to implement a stripped down version of grep in C and Rust preserving its core functionality, and to perform a comparative study between Rust and C with respect to Performance, and Ease of Use.
 
 Performance - Comparison of the time taken to process files of increasing size, and plotting the same. Also comparing the memory usage of both implementations.
+
 Ease of Use - Size of code in both implementations, and qualitative understanding of the experience writing in both languages.
 
 An analysis of whether the functional or imperative programming approach to a CLI tool like grep would be an overall outcome of the project - this analysis would be on the basis of the theoretical and quantitative understanding of the two paradigms, and how they apply to grep’s use case.
