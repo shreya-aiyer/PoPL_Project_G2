@@ -47,6 +47,7 @@ Functional programming languages like Rust are more focused on 'What?' is to be 
 - Temporary allocation for the modified strings (to_lowercase(), format!()) and the vector created by collect::<Vec<String>>(), are handled by Rust's ownership and borrowing rules, ensuring they are freed when they are no longer needed. Thus for every line of input, additional double memory is not retained when converting to lowercase and storing the duplicate string .
 - In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.(refer **lines 78,79 grep_impli.c** and the below analysis of the removal of the manual deallocation)
 
+
 Instructions for compilation and running
 -----------------------------------------
 Cargo:
@@ -63,6 +64,8 @@ gcc grep_impli.c
 
 Results
 ---------
+For results, we thought of a five-pronged approach to get accurate data. This was done because using one input only will give us biased results, and the other prongs of the fork can help in _confirming_ the results that the first few prongs had shown. The 5 levels of data used were all text files: one of 40 lines, one of ~70 lines, one of ~100,000 lines, one of ~500,000 lines and the fifth one had ~1,000,000 lines. The sizes of these files are as shown in the table below. These files are also part of this repository under "textfiles.zip"
+
 40 lines  – Rust
 
 Result - more time but lesser CPU utilisation
