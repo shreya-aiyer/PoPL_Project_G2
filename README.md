@@ -17,6 +17,9 @@ Though there are existing implementations of grep using Rust, this comparative s
 
 Software Architecture
 ---------------------
+![Beige Colorful Minimal Flowchart Infographic Graph](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/92772716/ded42629-254f-4169-b8c4-67e550081d7b)
+
+
 The testing component was locally present, and primarily used the inbuilt system monitor to track the use of memory and time of execution of the program. 
 
 To acquire data about the memory deallocated/leaked in the C code, we used the software Valgrind ([https://valgrind.org/]), a suite of tools that can automatically detect many memory management and threading bugs. 
