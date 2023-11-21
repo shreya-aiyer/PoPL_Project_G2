@@ -124,7 +124,7 @@ Tabulated Results For Time
 Tabulated Results For Memory Utilisation
 ----------
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/b75becd1-afa7-4bae-bb56-dc07e0673ceb)
-![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/207adb29-6eb7-473f-bfce-c1c0b29de768)
+![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/75fdbce6-a93c-4d80-977e-ce54b2eccdae)
 
 Difference in data when failing to deallocate memory in C - this is not possible to do in Rust due to how the langauge is designed
 ----
