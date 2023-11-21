@@ -72,6 +72,8 @@ gcc grep_impli.c
 
 Results
 ---------
+We implemented a testing and data collection strategy comprising five different sizes of input files to ensure the coherence of our gathered data. These levels serve to validate and cross-confirm patterns identified by the others. The datasets for testing are structured as text (.txt) files, with the first file containing 40 lines, the second containing 70 lines, and the remaining three escalating in size to 100,000 lines, 500,000 lines, and 1,000,000 lines, respectively. This multifaceted approach allowed us to capture diverse data across varying input dataset sizes. Detailed results and specifications for each input are presented in the tables below.
+
 40 lines  – Rust
 
 Result - more time but lesser CPU utilisation
@@ -126,14 +128,18 @@ Tabulated Results For Time
 ![Screenshot from 2023-11-17 15-55-18](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/abf46738-333e-4f48-9b28-71d877c2e3d7)
 ![Screenshot from 2023-11-17 15-56-46](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/f2f34e89-6b36-42cf-a69c-eff3b77df50a)
 
+We notice a trend where the Rust implementation takes greater time than C, even at higher levels of input. This could be due to some kind of load overheads in the crates utilised, or how the memory allocation and deallocation is working. 
+
 Tabulated Results For Memory Utilisation
 ----------
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/b75becd1-afa7-4bae-bb56-dc07e0673ceb)
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/75fdbce6-a93c-4d80-977e-ce54b2eccdae)
 
+We can see that the memory utilisation in Rust is better than that in C. The data leaked or left unallocated is supposed to be minimal, so no extra memory is used due to mismanagement. 
+
 Difference in data when failing to deallocate memory in C - this is not possible to do in Rust due to how the langauge is designed
 ----
-Both non deallocated and definitely leaked memory is seen.
+Both non deallocated and definitely leaked memory is seen, reflecting poorer memory management in C.
 ![image](https://github.com/shreya-aiyer/PoPL_Project_G2/assets/93695659/b1ef3aba-db81-4e1b-a6a6-165c40742fb6)
 
 
