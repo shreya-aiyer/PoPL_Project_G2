@@ -17,9 +17,12 @@ Though there are existing implementations of grep using Rust, this comparative s
 
 Software Architecture
 ---------------------
+There are multiple software architectures being implemented. There is a CLI (Command Line Interface) that is being used for the input and output of the program.
+Another major architecture being used is file handling (file open, read, etc.). The grep method searches for a particular word in a file. This requires a .txt file to be loaded into memory and opened. 
+This implementation was relatively straightforward, so we wrote the code ourselves (for C and Rust). 
 The testing component was locally present, and primarily used the inbuilt system monitor to track the use of memory and time of execution of the program. 
 
-To acquire data about the memory deallocated/leaked in the C code, we used the software Valgrind ([https://valgrind.org/]), a suite of tools that can automatically detect many memory management and threading bugs. 
+The code was run on a MacBook Air running macOS Sonoma on the Apple M1 chipset. To pull statistics on memory and CPU utilization, we used the Activity Monitor, which comes as a default in macOS. This application gives live data about all running processes on the system.
 
 POPL Aspects
 ------------
