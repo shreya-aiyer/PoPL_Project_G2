@@ -12,34 +12,35 @@ Ease of Use - Size of code in both implementations, and qualitative understandin
 
 An analysis of whether the functional or imperative programming approach to a CLI tool like grep would be an overall outcome of the project - this analysis would be on the basis of the theoretical and quantitative understanding of the two paradigms, and how they apply to grep’s use case.
 
-Though there are existing implementations of grep using Rust, this comparative study incorporating memory utilisation has not been done before. This distinction in method of analysis sets our project apart from what we have currently seen existing. 
-
 
 Software Architecture
 ---------------------
-There are multiple software architectures being implemented. There is a CLI (Command Line Interface) that is being used for the input and output of the program.
-Another major architecture being used is file handling (file open, read, etc.). The grep method searches for a particular word in a file. This requires a .txt file to be loaded into memory and opened. 
-This implementation was relatively straightforward, so we wrote the code ourselves (for C and Rust). 
 The testing component was locally present, and primarily used the inbuilt system monitor to track the use of memory and time of execution of the program. 
-
-The code was run on a MacBook Air running macOS Sonoma on the Apple M1 chipset. To pull statistics on memory and CPU utilization, we used the Activity Monitor, which comes as a default in macOS. This application gives live data about all running processes on the system.
 
 To acquire data about the memory deallocated/leaked in the C code, we used the software Valgrind ([https://valgrind.org/]), a suite of tools that can automatically detect many memory management and threading bugs. 
 
 POPL Aspects
 ------------
-#### Imperitive vs Functional(Declarative programming language)
+-#### Imperitive vs Functional(Declarative programming language)
 ----------------------------------------------------------
-Imperitive programming languages like C describes a sequence of steps(algorithms) followed to reach a particular result. The focus here is on the 'How?'.
+-Imperitive programming languages like C describes a sequence of steps(algorithms) followed to reach a particular result. The focus here is on the 'How?'.
 Functional programming languages like Rust are more focused on 'What?' is to be obtained rather than how it is obtained.
 
-There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like map() and filter() in this code. For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language.
+-Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
 
-Declarative programming really shines when the user is only concerned with the “what” and not the “how”. This makes sense in cases like when designing an API layer on top of a more complex framework.
+-The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
 
-The reality is that somewhere underneath any declarative system there will be imperative programming driving it.
+-#### Ease of Use
+------------------
+-There is a certain level of abstraction that is associated with functional programming. This is evident in the usage of functions like **map()(line 28 of grep.rs)** and **filter()(line 19 of grep.rs)** in this code. 
 
-The advantage of utilising Rust here is the additional memory safety. Rust employs a unique ownership system where each value in Rust has a variable that is its "owner." There are strict rules governing ownership, borrowing, and references that prevent common issues like null pointer dereferencing, dangling pointers, and memory leaks. In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.
+-For someone new to the language, such functions lack clarity and lead to additional cognitive load. However once the programmer gets used to the language, these fuctionalities prove to be highly efficient and cut down on many lines of code that may be required to carry out the same operation in an imperitive programming language like C.
+
+-#### Memory Management
+-------------------------
+-The advantage of utilising Rust here is the additional memory safety. Rust employs a unique ownership system where each value in Rust has a variable that is its "owner." There are strict rules governing ownership, borrowing, and references that prevent common issues like null pointer dereferencing, dangling pointers, and memory leaks. 
+
+-In C, it is easy for the programmer's mistakes like not freeing allocated memory to cause differences in the memory utilisation.
 
 Instructions for compilation and running
 -----------------------------------------
@@ -114,8 +115,6 @@ Both non deallocated and definitely leaked memory is seen.
 Future work
 -----------
 - Utilisation of Valgrind or a Valgrind like profiling tool to analyse the Rust code as well to develop an in depth understanding of the exact memory advantages of the Rust implemenation. Currently, Valrgind itself has poor interfacing with Rust and does not read properly DWARF5 as generated by Clang14 (https://bugs.kde.org/show_bug.cgi?id=452758), and hence we are reliant on system monitor data alone.
-- Check if the above analysis holds for other types of CLI tools.
-- Implement and compare error handling mechanisms in both paradigms, and explore how these mechanisms affect code readability, robustness, and ease of maintenance.
 
 
 References
